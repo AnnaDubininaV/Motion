@@ -1,0 +1,22 @@
+.card {
+    height: 100%;
+    &-servise {
+        .card-title {
+            color: #000;
+            font-weight: 600;
+        }
+        .card-body {
+            text-align: center;
+            margin-top: 28px;
+        }
+        & .button {
+            margin-top: 17px;
+        }
+        & img {
+            height: 100%;
+        }
+        & .card-image {
+            height: 200px;
+        }
+    }
+}

@@ -1,0 +1,32 @@
+.section {
+    padding-top: 95px;
+    &-title {
+        color: #000000;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    &-subtitle {
+        color: #000;
+    }
+    &-hero {
+        background-image: url(https://images.unsplash.com/photo-1493804714600-6edb1cd93080?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80);
+        padding: 140px 0;
+        background-position: center 40%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: #ffffff;
+        &-title {
+            text-transform: capitalize;
+            line-height: 38px;
+            margin-bottom: 25px;
+        }
+        & .section-description {
+            margin-bottom: 25px;
+        }
+    }
+    &-intro {
+        & .section-description {
+            padding-left: 30px;
+        }
+    }
+}

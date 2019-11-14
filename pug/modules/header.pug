@@ -1,0 +1,10 @@
+include ../mixins
+header.header
+	.container
+		.header-wrapper
+			+link("#", "motion")(class= "logo")
+			.nav-wrapper
+				include nav
+				form.form-search(action="POST")
+					input.input(type= "text" placeholder= "Искать здесь..." class= "nav-input-search")
+					button.icon(type="submit" class= "icon-search")

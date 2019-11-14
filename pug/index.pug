@@ -1,0 +1,69 @@
+doctype html
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+		title Motion
+		link(rel="stylesheet", href="../css/index.css")
+	body
+		include modules/header.pug
+		include mixins.pug
+
+		- let buttonPrimary = "button-primary"
+
+		main.main
+			section.section.section-hero
+				.container
+					.section-body.grid-item-6
+						h1.section-hero-title we create videographic to communicate your data
+						p.section-description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, illum.
+						+link("#", "Contact us")(class= "button " + buttonPrimary)
+			section.section.section-intro
+				.container
+					.grid
+						.grid-item-6
+							h3.section-subtitle Split is a Motion Design Agency
+						.grid-item-6.border-left
+							p.section-description Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure ratione repudiandae cumque numquam inventore dolorem rem illum doloremque sunt at nulla dolor facilis et, quo delectus autem exercitationem laboriosam harum consequatur? Inventore, dolorum ducimus molestias sunt nostrum perspiciatis facilis, laborum, animi deserunt vel debitis voluptatem iure quam sit accusamus aspernatur?
+			section.section.section-services
+				.container
+					h2.section-title Our services
+					.grid.grid-large
+						.grid-item.grid-item-4
+							+cardService("https://www.ars.usda.gov/ARSUserFiles/oc/images/photos/gallery/camera.jpg",
+							"Motion design", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam maxime dolores nobis veniam, maiores vero aut voluptatem!")
+						.grid-item.grid-item-4
+							+cardService("https://www.ars.usda.gov/ARSUserFiles/oc/images/photos/gallery/camera.jpg",
+							"Motion design", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam maxime dolores nobis veniam, maiores vero aut voluptatem!")
+						.grid-item.grid-item-4
+							+cardService("https://www.ars.usda.gov/ARSUserFiles/oc/images/photos/gallery/camera.jpg",
+							"Motion design", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam maxime dolores nobis veniam, maiores vero aut voluptatem!")
+			section.section.section-feedback
+				.container-small
+						h2.section-title Discuss your progect whit us
+						form.form-feedback.grid-item-6(action="POST")
+							.form-control
+								input.input(type="text" id="nickname" name="nickname" class="input" placeholder="Name")
+							.form-control
+								input.input(type="email" id="user-email" name="user-email" class="input" placeholder="E-mail")
+							.form-control
+								textarea.textarea(id="content" name="content" class="textarea" placeholder="Hi! i'd like to work with you")
+							.form-control
+								button(type="submit" class= "button " + buttonPrimary + " button-block") Send message
+		footer.footer
+			.container
+				.footer-wrapper
+					.copyrights
+						+link("#", "Motion |")(class= "logo footer-logo")
+						span.slogan Hendcrafted with
+						span.icon.icon-heart
+					-
+						let social_list = [
+							{url: "#", classname: "icon-facebook"},
+							{url: "#", classname: "icon-linkedin"},
+							{url: "#", classname: "icon-instagram"}
+						]
+					-
+						let listItemClass = "icon-social"
+					+list(social_list, "list-social")

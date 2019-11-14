@@ -1,0 +1,20 @@
+mixin link(href, name)
+	a(href=href)&attributes(attributes)= name
+
+mixin cardService(cardImage, title, description)
+	.card.card-servise
+		figure.card-image
+			img(src=cardImage alt= "card-image")
+		.card-body
+			h4.card-title=title
+			p.card-description=description
+			+link("#", "More")(class= "button button-primary button-block")
+
+mixin list-item(className, item)
+	li(class="list-item" + className)
+		+link(item.url)(class="icon-social " + item.classname)
+
+mixin list(list, listClass)
+	ul(class="list " + listClass)
+		each item in list
+			+list-item("", item)

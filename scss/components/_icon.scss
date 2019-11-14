@@ -1,0 +1,52 @@
+@font-face {
+    font-family: 'Motion';
+    src: url('../fonts/icons/Motion.eot?n29j30');
+    src: url('../fonts/icons/Motion.eot?n29j30#iefix') format('embedded-opentype'), url('../fonts/icons/Motion.ttf?n29j30') format('truetype'), url('../fonts/icons/Motion.woff?n29j30') format('woff'), url('../fonts/icons/Motion.svg?n29j30#Motion') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'Motion' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon {}
+
+.icon-social {
+    padding: 7px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    font-size: 17px;
+}
+
+.icon-search:before {
+    content: "\e900";
+}
+
+.icon-heart:before {
+    content: "\e901";
+}
+
+.icon-instagram:before {
+    content: "\e902";
+}
+
+.icon-linkedin:before {
+    content: "\e903";
+}
+
+.icon-facebook:before {
+    content: "\ea90";
+}

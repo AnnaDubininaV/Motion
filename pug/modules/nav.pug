@@ -1,0 +1,10 @@
+include ../mixins
+nav.nav
+	-
+		let navItems = [
+			{url:"#", text: "Main"},
+			{url:"#", text: "About us"},
+			{url:"#", text: "Portfolio"},
+			{url:"#", text: "Contacts"}];
+	each item in navItems
+		+link(item.url, item.text)(class="nav-item")
